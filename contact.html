@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- *****Google Fonts*** -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <!-- *****Google Fonts*** -->
+    <!-- ******FontAwesome**** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <!-- ******FontAwesome**** -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <input id="hamburger" class="hamburger" type="checkbox" />
+        <label class="hamburger" for="hamburger">
+            <i></i>
+        </label>
+        <a href="#"><img class="logo" src="images/logo1.png" alt="website logo"></a>
+        <section class="drawerList">
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="#">Works</a> </li>
+                <li><a href="#">Blog</a> </li>
+                <li><a href="#">About Me</a> </li>
+                <li><a href="#">Contact Me</a></li>
+
+            </ul>
+        </section>
+    </nav>
+    <!-- ***********************************End nav*************** -->
+    <div class="bg"></div>
+    <!-- ***********************************End *************** -->
+    <!-- ***********************************Start Header*** -->
+    <header class="hero">
+        <div class="section-center hero-center">
+            <article class="hero-info">
+                <div class="underline"></div>
+                <h1>I'm Maen</h1>
+                <h4>freelance web Developer</h4>
+                <a href="contact.html" class="btn hero-btn">contact me</a>
+                <!-- social icons -->
+                <ul class="social-icons hero-icons">
+                    <li>
+                        <a href="https://www.twitter.com" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- ******** -->
+                <div id="preview-shadow">
+                    <div id="preview">
+                        <div id="corner-tl" class="corner"></div>
+                        <div id="corner-tr" class="corner"></div>
+                        <h3>What I Do</h3>
+                        <p>I was an accountant in my past life, now I enjoy coding websites.</p>
+                        <div id="corner-br" class="corner"></div>
+                        <div id="corner-bl" class="corner"></div>
+                    </div>
+                </div>
+                <!-- ******** -->
+            </article>
+            <article class="hero-img">
+                <img src="./images/maenfb.jpg" class="hero-photo" alt="Dev Maen photo" />
+                <!-- <img src="./images/maenin.png" class="hero-photo" alt="Dev Maen photo" /> -->
+            </article>
+        </div>
+
+    </header>
+    <!-- ***********************************end Header*** -->
+
+    <!-- ***************************************Animation file**** -->
+
+    <div class="slider"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

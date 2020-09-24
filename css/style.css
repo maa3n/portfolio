@@ -70,13 +70,20 @@ ul {
   padding-top: 125px;
   transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
   border-bottom-left-radius: 100vw;
-  background-color: #f7cf6b;
-  background-color: rgba(246, 202, 90, 0.9);
+  background-color: #ebc260;
+  background-color: rgba(227, 167, 28, 0.7);
 }
 
 @media (min-width: 768px) {
   .drawerList {
     width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .drawerList {
+    background-color: #e3a71c;
+    background-color: #e3a71c;
   }
 }
 
@@ -124,8 +131,8 @@ ul {
 
 .drawerList li a:hover {
   cursor: pointer;
-  background-color: #fcecc5;
-  background-color: rgba(249, 218, 139, 0.5);
+  background-color: #f4dca4;
+  background-color: rgba(233, 185, 73, 0.5);
 }
 
 input.hamburger {
@@ -367,6 +374,12 @@ label.hamburger {
   width: 50px;
 }
 
+@media screen and (max-width: 800px) {
+  label.hamburger {
+    width: 35px;
+  }
+}
+
 label.hamburger:hover {
   cursor: pointer;
 }
@@ -375,7 +388,7 @@ label.hamburger > i {
   overflow: visible;
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 4px;
   top: 50%;
   background-color: #FEFEFE;
   pointer-events: auto;
@@ -387,7 +400,7 @@ label.hamburger > i:before, label.hamburger > i:after {
   position: absolute;
   display: block;
   width: 100%;
-  height: 2px;
+  height: 4px;
   left: 50%;
   background-color: #FEFEFE;
   content: "";
@@ -428,7 +441,7 @@ label.hamburger {
   background-position: center center;
   position: relative;
   margin: 0px auto;
-  width: 100vw;
+  width: 100%;
   height: 60vh;
   z-index: -1;
 }
@@ -586,6 +599,11 @@ p {
   text-align: center;
 }
 
+.section-title h2 {
+  color: wheat;
+  font-family: 'Russo One', sans-serif;
+}
+
 .social-icons {
   display: grid;
   margin-top: 3rem;
@@ -631,6 +649,12 @@ Hero
   top: 0;
   right: 0;
   left: 0;
+}
+
+@media (min-width: 992px) {
+  .hero {
+    top: 50px;
+  }
 }
 
 .hero .underline {
@@ -822,5 +846,247 @@ h1 {
   #preview-shadow {
     margin-top: 150px;
     margin-bottom: 100px;
+  }
+}
+
+/*****************************Works page***/
+.wrapper {
+  margin: 20rem auto;
+  margin-bottom: 2rem;
+  max-width: 80rem;
+  font-family: 'Russo One', sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    margin-top: 65rem;
+  }
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-family: 'Russo One', sans-serif;
+  font-size: 2rem;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.col {
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-position: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.project1 {
+  background-image: url("https://unsplash.it/504/504/");
+}
+
+.project2 {
+  background-image: url("https://unsplash.it/504/504/");
+}
+
+.project3 {
+  background-image: url("https://unsplash.it/504/504/");
+}
+
+.back {
+  background: var(--clr-primary-5);
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block;
+  opacity: .6;
+  background-color: #000;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.container:hover .front,
+.container:hover .back {
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner {
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+}
+
+.inner p {
+  color: var(--clr-primary-5);
+}
+
+.container .back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+.container .back .inner p {
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.container .front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.container:hover .back {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+.container:hover .front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+
+.front .inner p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after {
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem) {
+  .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .col {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  .col {
+    width: 95%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+.service {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+  border: 0.25rem solid var(--clr-primary-8);
+  border: 0.15rem solid var(--clr-primary-8);
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  transition: var(--transition);
+}
+
+.service p {
+  transition: var(--transition);
+  line-height: 1.5;
+  letter-spacing: 0.15rem;
+  font-weight: 300;
+  color: #000;
+}
+
+.service:hover {
+  background: var(--clr-primary-4);
+  color: var(--clr-white);
+}
+
+.service:hover p {
+  color: var(--clr-white);
+}
+
+.service:hover .underline {
+  background: var(--clr-white);
+}
+
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
