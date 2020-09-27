@@ -424,7 +424,7 @@ p {
 // }
 
 .section-center {
-  width: 90vw;
+  width: 92vw;
   margin: 0 auto;
   max-width: 1170px;
 }
@@ -625,6 +625,7 @@ Hero
   .hide {
     background: black;
     overflow: hidden;
+    margin-left: 15px;
     
   }
   
@@ -1198,13 +1199,19 @@ Blog
   
 }
 
-.card-footer{
-  margin-top: 50px;
-}
+// .card-footer{
+//   margin-top: 20px;
+// }
 
 /* rest of the styles */
 .card-info {
   padding: 1rem 1.5rem;
+  p{
+    line-height: 1.2;
+    letter-spacing: 0.15rem;
+    font-weight: 300;
+    color: #000;
+  }
 }
 .card-front img {
   height: 13rem;
