@@ -870,7 +870,7 @@ h1 {
 
 @media screen and (max-width: 992px) {
   .wrapper {
-    margin-top: 70rem;
+    display: none;
   }
 }
 
@@ -1267,7 +1267,14 @@ Blog
 ===============
 */
 .blog {
-  background: var(--clr-grey-10);
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .blog {
+    margin-top: 70rem;
+    display: block;
+  }
 }
 
 .card {
@@ -1294,19 +1301,8 @@ Blog
   background: var(--clr-white);
 }
 
-.card-back {
-  background: var(--clr-primary-10);
-  transform: rotateY(180deg);
-  display: grid;
-  place-items: center;
-}
-
-.card:hover .card-front {
-  transform: rotateY(-180deg);
-}
-
-.card:hover .card-back {
-  transform: rotateY(0);
+.card-footer {
+  margin-top: 50px;
 }
 
 /* rest of the styles */
@@ -1319,27 +1315,6 @@ Blog
   object-fit: cover;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
-}
-
-.card-footer {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-}
-
-.card-footer img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.card-footer p {
-  margin-bottom: 0;
-  text-transform: uppercase;
-  justify-self: end;
-  color: var(--clr-primary-5);
-  font-size: 0.85rem;
 }
 
 .blog-center {
