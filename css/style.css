@@ -891,7 +891,6 @@ h1 {
 .col {
   width: calc(25% - 2rem);
   margin: 1rem;
-  cursor: pointer;
 }
 
 .container {
@@ -913,18 +912,19 @@ h1 {
   border-radius: 10px;
   color: #fff;
   font-size: 1.5rem;
+  position: relative;
 }
 
 .project1 {
-  background-image: url("https://unsplash.it/504/504/");
+  background-image: url("../images/60days-sm.png");
 }
 
 .project2 {
-  background-image: url("https://unsplash.it/504/504/");
+  background-image: url("../images/wahibi-sm.png");
 }
 
 .project3 {
-  background-image: url("https://unsplash.it/504/504/");
+  background-image: url("../images/dev-sm.png");
 }
 
 .back {
@@ -973,6 +973,18 @@ h1 {
 
 .inner p {
   color: var(--clr-primary-5);
+}
+
+.inner .btn {
+  background-color: var(--clr-primary-6);
+}
+
+.inner .btn:hover {
+  background-color: var(--clr-primary-8);
+}
+
+.inner .moreInfo:hover {
+  color: var(--clr-grey-4);
 }
 
 .container .back {
@@ -1264,7 +1276,7 @@ Timeline
 
 /*
 =============== 
-Blog
+my work for mobile
 ===============
 */
 .blog {
@@ -1329,4 +1341,13 @@ Blog
 
 .my-work-img {
   width: 100%;
+}
+
+.moreInfo {
+  margin-top: 60px;
+  font-size: 16px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  color: var(--clr-grey-2);
 }
